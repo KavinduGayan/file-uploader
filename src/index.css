@@ -49,3 +49,20 @@ input[type='file'] {
 .upload-button:hover {
   background-color: #006600;
 }
+
+.result-container {
+  margin-top: 20px;
+}
+
+.result-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.copy-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

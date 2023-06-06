@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
+  const [result, setResult] = useState(null)
 
   const onFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -13,16 +16,21 @@ function App() {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      const response = await axios.post('http://your-backend-url', formData, {
+      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
 
       console.log('File uploaded successfully:', response.data);
+      setResult(response.data.result)
     } catch (error) {
       console.error('Error uploading file:', error);
     }
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(result);
   };
 
   return (
@@ -36,7 +44,15 @@ function App() {
           </button>
         )}
       </div>
+      <div className="result-container">
+        {result && <p className="result-text">{result}<button className="copy-button" onClick={copyToClipboard}>
+              <FontAwesomeIcon icon={faCopy} />
+            </button></p>  
+        }
+      
+      </div>
     </div>
+
   );
 }
 
