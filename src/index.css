@@ -1,68 +1,233 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	left: 0px;
+	top: 0px;
+	background: linear-gradient(180deg, rgba(84, 174, 69, 0.5) 0%, rgba(96, 69, 174, 0.5) 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header-font {
+	position: absolute;
+	width: 407px;
+	height: 78px;
+	left: 38px;
+	top: 5px;
+
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 39px;
+
+	color: #000000;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f0f5f5;
-  min-height: 100vh;
+.background {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(180deg, rgba(84, 174, 69, 0.2) 0%, rgba(96, 69, 174, 0.2) 100%);
 }
 
-.title {
-  color: #008000;
-  margin-bottom: 1rem;
+.upload-pdf-font {
+	/* position: absolute; */
+	/* Remove position:absolute; */
+	width: 500px;
+	height: 60px;
+	left: 0;
+	/* Align to the left */
+	top: 0;
+	/* Align to the top */
+	transform: translate(20px, 20px);
+	/* Add padding/margin if needed */
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 63px;
+	color: #6045AE;
 }
 
-.file-input-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1rem;
+.upload-image {
+	/* previous styles */
+	position: absolute;
+	width: 79px;
+	height: 79px;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	background: url(images/file.png);
+	background-size: cover;
+	cursor: pointer;
+	/* Add cursor style to indicate it is clickable */
 }
 
-input[type='file'] {
-  margin-bottom: 1rem;
+.upload-pdf-name {
+	/* previous styles */
+	position: absolute;
+	width: 200px;
+	height: 79px;
+	left: 70%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-size: cover;
+	cursor: pointer;
+	/* Add cursor style to indicate it is clickable */
 }
 
-.upload-button {
-  padding: 0.5rem 1rem;
-  background-color: #008000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.notification {
+	/* previous styles */
+	position: absolute;
+	width: 343px;
+	height: 39px;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 39px;
+	color: #000000;
 }
 
-.upload-button:hover {
-  background-color: #006600;
+.button-upload {
+	/* previous styles */
+	position: absolute;
+	width: 144px;
+	height: 45px;
+	left: 50%;
+	top: calc(62% + 20px);
+	/* Adjust the value for desired spacing */
+	transform: translate(-50%, -50%);
+	background: linear-gradient(180deg, rgba(90, 116, 128, 0.5) 0%, rgba(90, 116, 128, 0) 100%);
+	filter: drop-shadow(5px 4px 4px rgba(0, 0, 0, 0.25));
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.result-container {
-  margin-top: 20px;
+.button-text {
+	/* previous styles */
+	position: relative;
+	/* Change position to relative */
+	width: 81px;
+	height: 33px;
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 31px;
+	color: #6045AE;
 }
 
-.result-text {
-  font-size: 18px;
-  color: #333;
+.upload-instruction {
+	/* previous styles */
+	position: absolute;
+	width: 401px;
+	height: 26px;
+	left: 0;
+	/* Align to the left */
+	bottom: 0;
+	/* Align to the bottom */
+	transform: translate(20px, -20px);
+	/* Add padding/margin if needed */
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 26px;
+	color: #6045AE;
 }
 
-.copy-button {
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+.file-name {
+	position: absolute;
+	top: 0;
+	right: -100px;
+	/* Adjust the value to position it properly */
+	white-space: nowrap;
+	/* Prevent line breaks */
+}
+
+.upload-container {
+	position: relative;
+	display: inline-block;
+}
+
+
+.main-rectangle {
+	box-sizing: border-box;
+	position: absolute;
+	width: 90%;
+	max-width: 734px;
+	height: 50vh;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #FFFAFA;
+	border: 1px solid #6045AE;
+	box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 50px;
+	margin-top: 5vh;
+}
+
+.result-url-box {
+	position: absolute;
+	width: 90%;
+	max-width: 1216px;
+	height: 74px;
+	left: 50%;
+	top: 20vh;
+	transform: translate(-50%, -50%);
+	background: #FFFAFA !important;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+	.main-rectangle {
+		width: 90%;
+		height: 60vh;
+	}
+
+	.result-url-box {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main-rectangle {
+		width: 90%;
+		height: 70vh;
+	}
+
+	.result-url-box {
+		width: 90%;
+	}
+}
+
+.result-url {
+	position: absolute;
+	width: 1060px;
+	height: 26px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	/* Adjust the top value as per your requirements */
+	font-family: 'Inika';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 26px;
+	color: #000000;
+}
+
+.result-url:hover {
+	text-decoration: underline;
+	/* Add underline on hover if desired */
 }
