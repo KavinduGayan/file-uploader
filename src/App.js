@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { BeatLoader } from 'react-spinners';
+import linkImage from './images/link.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -67,25 +70,28 @@ function App() {
       }
 
       {result &&
-        <div class="result-url-box">
-          <a class="result-url"
+        <div className="result-url-box">
+          <img src={linkImage} alt="Link" className='image-icon' /><a class="result-url"
             href="https://docs.google.com/spreadsheets/d/1KmNit3g3tW8JX-8a04bpfjJN_b6jMjKZ_gaLcMkoCL0/edit?usp=sharing"
             target="_blank">https://docs.google.com/spreadsheets/d/1KmNit3g3tW8JX-8a04bpfjJN_b6jMjKZ_gaLcMkoCL0/edit?usp=sharing</a>
+            <button className="copy-button" onClick={copyToClipboard}>
+              <FontAwesomeIcon icon={faCopy} />
+            </button>
         </div>
       }
 
-      <div class="main-rectangle">
-        <div class="upload-pdf-font">
+      <div className="main-rectangle">
+        <div className="upload-pdf-font">
           Upload PDF File
         </div>
         <label for="file-upload" class="upload-image"></label>
         <input type="file" id="file-upload" class="upload-image" accept=".pdf" style={hideUploadButton} onChange={onFileChange} />
         <div className='upload-pdf-name'>{pdfName}</div>
-        <div class="notification">Drag & drop or browse</div>
-        <button class="button-upload" onClick={onFileUpload} disabled={isDisabled}>
-          <div class="button-text" >Upload </div>
+        <div className="notification">Drag & drop or browse</div>
+        <button className="button-upload" onClick={onFileUpload} disabled={isDisabled}>
+          <div className="button-text" >Upload </div>
         </button>
-        <div class="upload-instruction">Upload PDF File To Process Your Document.</div>
+        <div className="upload-instruction">Upload PDF File To Process Your Document.</div>
       </div>
     </>
 
