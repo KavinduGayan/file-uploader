@@ -16,7 +16,7 @@
 
 	font-family: 'Inika';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 25px;
 	line-height: 39px;
 
@@ -44,7 +44,7 @@
 	/* Add padding/margin if needed */
 	font-family: 'Inika';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 48px;
 	line-height: 63px;
 	color: #6045AE;
@@ -87,9 +87,9 @@
 	transform: translate(-50%, -50%);
 	font-family: 'Inika';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 30px;
-	line-height: 39px;
+	line-height: 40px;
 	color: #000000;
 }
 
@@ -118,7 +118,7 @@
 	height: 33px;
 	font-family: 'Inika';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 24px;
 	line-height: 31px;
 	color: #6045AE;
@@ -137,7 +137,7 @@
 	/* Add padding/margin if needed */
 	font-family: 'Inika';
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 20px;
 	line-height: 26px;
 	color: #6045AE;

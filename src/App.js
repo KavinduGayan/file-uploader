@@ -75,23 +75,32 @@ function App() {
           <img src={linkImage} alt="Link" className='image-icon' /><a class="result-url"
             href={result}
             target="_blank">{result}</a>
-            <button className="copy-button" onClick={copyToClipboard}>
-              <FontAwesomeIcon icon={faCopy} />
-            </button>
+          <button className="copy-button" onClick={copyToClipboard}>
+            <FontAwesomeIcon icon={faCopy} />
+          </button>
         </div>
       }
 
       <div className="main-rectangle">
+
         <div className="upload-pdf-font">
           Upload PDF File
         </div>
-        <label for="file-upload" class="upload-image"></label>
-        <input type="file" id="file-upload" class="upload-image" accept=".pdf" style={hideUploadButton} onChange={onFileChange} />
-        <div className='upload-pdf-name'>{pdfName}</div>
-        <div className="notification">Drag & drop or browse</div>
-        <button className="button-upload" onClick={onFileUpload} disabled={isDisabled}>
-          <div className="button-text" >Upload </div>
-        </button>
+        <div className="row">
+          <label for="file-upload" class="upload-image"></label>
+          <input type="file" id="file-upload" class="upload-image" accept=".pdf" style={hideUploadButton} onChange={onFileChange} />
+          <div className='upload-pdf-name'>{pdfName}</div>
+        </div>
+        <br /><br />
+        <div className="row">
+          <div className="notification">Drag & drop or browse</div>
+        </div>
+        <br /><br />
+        <div className="row">
+          <button className="button-upload" onClick={onFileUpload} disabled={isDisabled}>
+            <div className="button-text" >Upload </div>
+          </button>
+        </div>
         <div className="upload-instruction">Upload PDF File To Process Your Document.</div>
       </div>
     </>
