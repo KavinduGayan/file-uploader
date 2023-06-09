@@ -25,6 +25,7 @@ function App() {
   const onFileUpload = async () => {
     try {
       setLoading(true)
+      setResult(null)
       const formData = new FormData();
       formData.append('file', selectedFile);
 

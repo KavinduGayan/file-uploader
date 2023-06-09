@@ -163,7 +163,7 @@
 	position: absolute;
 	width: 90%;
 	max-width: 734px;
-	height: 50vh;
+	height: 55vh;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
@@ -172,6 +172,10 @@
 	box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 50px;
 	margin-top: 5vh;
+}
+
+.main-rectangle>* {
+	margin-bottom: 10px;
 }
 
 .result-url-box {
