@@ -72,8 +72,8 @@ function App() {
       {result &&
         <div className="result-url-box">
           <img src={linkImage} alt="Link" className='image-icon' /><a class="result-url"
-            href="https://docs.google.com/spreadsheets/d/1KmNit3g3tW8JX-8a04bpfjJN_b6jMjKZ_gaLcMkoCL0/edit?usp=sharing"
-            target="_blank">https://docs.google.com/spreadsheets/d/1KmNit3g3tW8JX-8a04bpfjJN_b6jMjKZ_gaLcMkoCL0/edit?usp=sharing</a>
+            href={result}
+            target="_blank">{result}</a>
             <button className="copy-button" onClick={copyToClipboard}>
               <FontAwesomeIcon icon={faCopy} />
             </button>
